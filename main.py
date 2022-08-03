@@ -9,7 +9,7 @@ layout = [
             [sg.Text("Give image url if you want to show it",font = "Any 18")],
             [sg.InputText()],
             [sg.Button('Show anime image'),sg.Button('Show url image'), sg.Button('Exit')],
-            [sg.Image(r"C:\Users\Артём\Downloads\g.png",key = "img")],
+            [sg.Image(r"g.png",key = "img")],
             [sg.Text('',key = "connection",font = "Any 22",justification="center")]]
 
 # Create the Window
@@ -23,8 +23,8 @@ while True:
         try:
             window['connection'].update('Internet is working');
             mymodule.get_image();
-            layout+=[sg.Image(r"C:\Users\Артём\Downloads\g.png")];
-            window['img'].update(r"C:\django\img1.png");
+            layout+=[sg.Image(r"g.png")];
+            window['img'].update(r"img1.png");
         except Exception:
             window['connection'].update('Internet is not working');
             pass;
